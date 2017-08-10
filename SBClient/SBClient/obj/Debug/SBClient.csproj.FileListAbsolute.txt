@@ -1,0 +1,9 @@
+C:\GITHUB\SBClient\SBClient\SBClient\bin\Debug\SBClient.exe.config
+C:\GITHUB\SBClient\SBClient\SBClient\bin\Debug\SBClient.exe
+C:\GITHUB\SBClient\SBClient\SBClient\bin\Debug\SBClient.pdb
+C:\GITHUB\SBClient\SBClient\SBClient\bin\Debug\Microsoft.ServiceBus.dll
+C:\GITHUB\SBClient\SBClient\SBClient\bin\Debug\Microsoft.WindowsAzure.Configuration.dll
+C:\GITHUB\SBClient\SBClient\SBClient\bin\Debug\Microsoft.ServiceBus.xml
+C:\GITHUB\SBClient\SBClient\SBClient\obj\Debug\SBClient.csprojResolveAssemblyReference.cache
+C:\GITHUB\SBClient\SBClient\SBClient\obj\Debug\SBClient.exe
+C:\GITHUB\SBClient\SBClient\SBClient\obj\Debug\SBClient.pdb
