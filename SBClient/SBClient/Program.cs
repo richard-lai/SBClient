@@ -12,12 +12,19 @@ namespace SBClient
     class Program
     {
         static void Main(string[] args)
-        {Console.WriteLine("Connecting");
+        {
+            Console.WriteLine("Connecting");
             var _messagingFactory = MessagingFactory.Create();
             var _namespaceManager = NamespaceManager.Create();
 
-            _namespaceManager.Settings.TokenProvider = TokenProvider.CreateOAuthTokenProvider(new Uri[] { new Uri("https://richlaisbhost:9355/ServiceBusDefaultNamespace") }, new NetworkCredential("richard.lai", "I.am.a.pirate101"));
-            _messagingFactory.GetSettings().TokenProvider = TokenProvider.CreateOAuthTokenProvider(new Uri[] { new Uri("https://richlaisbhost:9355/ServiceBusDefaultNamespace") }, new NetworkCredential("richard.lai", "I.am.a.pirate101"));
+            Console.WriteLine("Creating Provider");
+            var provider = TokenProvider.CreateOAuthTokenProvider(new Uri[] { new Uri("https://richlaisbhost:9355/ServiceBusDefaultNamespace") }, new NetworkCredential("richard.lai", "I.am.a.pirate101"));
+
+            Console.WriteLine("Setting NS Provider");
+            _namespaceManager.Settings.TokenProvider = provider;
+
+            Console.WriteLine("Setting MF Provider");
+            _messagingFactory.GetSettings().TokenProvider = provider;
 
             Console.WriteLine("Checking");
             if (!_namespaceManager.QueueExists("MyQueue"))
